@@ -22,6 +22,11 @@ jobs:
           mkdocs new .
           mkdocs build
 
+      - name: Merge ipynb files
+        run: |
+          pip install nbmerge
+          nbmerge solutions/day1.ipynb solutions/day2.ipynb > docs/solutions.ipynb
+
       - name: Convert ipynb to md
         run: |
           pip install nbconvert
