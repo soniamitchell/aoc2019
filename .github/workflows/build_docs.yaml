@@ -26,12 +26,12 @@ jobs:
         run: |
           pip install jupyter
           pip install nbmerge
-          jupyter nbmerge solutions/day1.ipynb solutions/day2.ipynb > docs/solutions.ipynb
+          nbmerge solutions/day1.ipynb solutions/day2.ipynb > solutions/solutions.ipynb
 
       - name: Convert ipynb to md
         run: |
           pip install nbconvert
-          jupyter nbconvert --to markdown aoc2019/solutions.ipynb
+          jupyter nbconvert --to markdown solutions/solutions.ipynb
 
       - name: Move pages
         run: |
