@@ -2,3 +2,4 @@ site/
 notes
 .vscode/
 docs/
+aoc2019/__pycache__/
