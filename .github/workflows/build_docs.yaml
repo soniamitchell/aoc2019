@@ -16,9 +16,21 @@ jobs:
         with:
           python-version: '3.8'
 
-      - name: Build and deploy docs
+      - name: Initialise docs
         run: |
           pip install mkdocs
           mkdocs new .
           mkdocs build
-          mkdocs gh-deploy
+
+      - name: Convert ipynb to md
+        run: |
+          pip install nbconvert
+          jupyter nbconvert --to markdown aoc2019/solutions.ipynb
+
+      - name: Move pages
+        run: |
+          mv real_mkdocs.yml mkdocs.yml
+          mv aoc2019/solutions.md docs/solutions.md
+
+      - name: Deploy
+        run: mkdocs gh-deploy
