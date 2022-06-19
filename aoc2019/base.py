@@ -4,11 +4,11 @@ This module contains general helper functions for AoC2019.
 
 The module contains the following functions:
 
-- `read_data(path)` - Returns a vector of integers.
+- `load_data(path)` - Returns a vector of integers.
 """
 
 
-def read_data(path):
+def load_data(path):
     """
     Read data from txt file.
 
