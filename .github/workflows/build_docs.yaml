@@ -36,7 +36,7 @@ jobs:
       - name: Move pages
         run: |
           mv real_mkdocs.yml mkdocs.yml
-          mv aoc2019/solutions.md docs/solutions.md
+          mv solutions/solutions.md docs/solutions.md
 
       - name: Deploy
         run: |
