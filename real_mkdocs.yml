@@ -1,8 +1,5 @@
 site_name: aoc2019
 
-theme:
-  name: "readthedocs"
-
 plugins:
   - mkdocstrings
 
