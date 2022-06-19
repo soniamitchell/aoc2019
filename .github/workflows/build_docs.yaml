@@ -18,7 +18,7 @@ jobs:
 
       - name: Build docs
         run: |
-          pip install Sphinx
+          pip install mkdocs
           mkdocs build
 
       - name: Deploy
