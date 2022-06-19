@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "aoc2019"
+version = "0.1.0"
+description = ""
+authors = ["soniamitchell <sonia.mitchell@glasgow.ac.uk>"]
+license = "MIT"
+readme = "README.rst"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+numpy = "^1.22.4"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+flake8 = "^4.0.1"
+mypy = "^0.961"
+black = {version = "^22.3.0", allow-prereleases = true}
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
