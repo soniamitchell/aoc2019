@@ -35,4 +35,4 @@ jobs:
       - name: Deploy
         run: |
           pip install mkdocstrings
-          mkdocs gh-deploy
+          mkdocs gh-deploy --force --clean --verbose
