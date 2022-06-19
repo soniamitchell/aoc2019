@@ -33,4 +33,6 @@ jobs:
           mv aoc2019/solutions.md docs/solutions.md
 
       - name: Deploy
-        run: mkdocs gh-deploy
+        run: |
+          pip install mkdocstrings
+          mkdocs gh-deploy
