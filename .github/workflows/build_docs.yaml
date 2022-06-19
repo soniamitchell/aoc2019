@@ -24,12 +24,12 @@ jobs:
 
       - name: Merge ipynb files
         run: |
+          pip install jupyter
           pip install nbmerge
           nbmerge solutions/day1.ipynb solutions/day2.ipynb > docs/solutions.ipynb
 
       - name: Convert ipynb to md
         run: |
-          pip install jupyter
           pip install nbconvert
           jupyter nbconvert --to markdown aoc2019/solutions.ipynb
 
