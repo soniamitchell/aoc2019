@@ -17,7 +17,9 @@ jobs:
           python-version: '3.8'
 
       - name: Build docs
-        run: mkdocs build
+        run: |
+          pip install Sphinx
+          mkdocs build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
